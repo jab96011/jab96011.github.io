@@ -4,7 +4,7 @@ title: Home
 description: >-
   Especializado en el desarrollo de API RESTs con Ruby on Rails. He participado
   en diversas etapas del ciclo de desarrollo de aplicaciones.
-image: /assets/images/main.avif
+image: /assets/images/title.jpg
 main_content: >
   # Jaebin Lee
 
