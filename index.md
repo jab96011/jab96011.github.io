@@ -9,7 +9,7 @@ main_content: >
   # Jaebin Lee
 
 
-  **Hello!** I am an undergraduate student at Seoul National University, majoring in **Landscape Architecture** and **Physics**. As a research assistant, I worked on improving diffusion simulations for 2D TMD materials to validate experimental results. In the future, I hope to investigate **complex systems** related to urban green infrastructure and ecosystems.
+  **Hello!** I am an undergraduate student at Seoul National University, majoring in **Landscape Architecture** and **Physics**. As a research assistant, I worked on improving simulations for 2D materials to validate experimental results. In the future, I hope to investigate **complex systems** related to urban green infrastructure and ecosystems.
 footer: true
 permalink: /
 ---
