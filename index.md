@@ -6,24 +6,15 @@ description: >-
   en diversas etapas del ciclo de desarrollo de aplicaciones.
 image: /assets/images/main.avif
 main_content: >
-  # Hello Friend. Hello World.
+  # Jaebin Lee
 
 
-  **Solum remis procul; poenam, corde?** Te quoque facti agros, querorque,
-  excutis
-
-  quoque vestigia substricta caelestique posuisset litore: suaque. **Et
-  limine**, et
-
-  nimium nec io diemque vocat spicea et horror licet leto fortuna suis cum.
-  **Lecto viae, quod Naxos tumulos quoque.** Et illo de nati iuvenci oris habet,
-  perdidit parantur! **#Rails #Ruby #Python #HTML #Css #Js #AWS**
+  **Hello!** I am an undergraduate student at Seoul National University, majoring in **Landscape Architecture** and **Physics**. As a research assistant, I worked on improving diffusion simulations for 2D TMD materials to validate experimental results. In the future, I hope to investigate **complex systems** related to urban green infrastructure and ecosystems.
 footer: true
 permalink: /
 ---
-## Hello World
+## Hello, 안녕하세요!
+**“Is there any connection between physics and landscape architecture?”**
+I am Jaebin Lee, pursuing an uncommon double major in these two fields. While I was less drawn to landscape design itself, I eventually found myself taking on physics as a second major. When I applied for a position as an undergraduate research assistant—driven by my genuine interest in physics—a professor once posed that very question to me. Even if the connection is not obvious, I believe that the broad perspective gained from studying both disciplines will one day prove valuable in my journey.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat porta lorem, non auctor magna aliquet ac. Nam finibus in massa quis molestie. Vestibulum malesuada iaculis consequat. Phasellus sagittis, nisl non semper vestibulum, tellus enim interdum purus, ac pretium magna lectus ac turpis. Phasellus scelerisque hendrerit magna vitae fermentum. Praesent facilisis erat viverra eros tristique, id faucibus eros volutpat. Duis tempus arcu in felis sollicitudin, in sodales leo scelerisque. Nullam dapibus libero eu iaculis rhoncus.
-
-Nulla sed lorem imperdiet, efficitur velit et, mollis neque. Etiam placerat vehicula diam, a scelerisque diam posuere vel. Sed a convallis elit. Proin sodales, mi sit amet aliquam lobortis, ligula elit tristique justo, sodales placerat diam nunc vitae eros. Etiam maximus mauris eget sem varius, mollis ullamcorper metus porttitor. Aenean at elit sodales, rutrum ex tincidunt, molestie lorem. Donec in ante fermentum, pharetra dolor in, tempus nunc. Vivamus in lacinia lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
+**"물리와 조경이 관계가 있나요?"** 전무후무한 복수전공을 하고 있는 이재빈이라고 합니다. 조경 디자인보다는 다른 것에 관심이 많았던 저는, 어쩌다 보니 물리를 복수전공하게 되었습니다. 물리가 재밌어 학부연구생을 지원할 때, 교수님께서 저리 말씀을 하셨네요. 연관없어 보일지라도, 두 개의 전공을 통해 얻은 넓은 시야가 저의 앞길에 언젠가 도움이 될 것이라는 믿음을 가지고 살아가고 있습니다. 
