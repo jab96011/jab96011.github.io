@@ -1,4 +1,4 @@
-title: AwesomeJT
+title: Jaebin Lee
 logo: /assets/images/logo.avif
 baseurl: /awesome-jekyll-theme
 
@@ -18,8 +18,8 @@ collections:
 ##
 contact_channels_section: true
 contact_channels:
-  # email: "example@example.cl"
-  github: "https://github.com/a-chacon"
+  email: "jab96011@snu.ac.kr"
+  github: "https://github.com/jab96011"
   # telegram: "https://t.me/"
   # stackoverflow: "https://stackoverflow.com"
   # discord: "https://discord.com/"
