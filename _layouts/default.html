@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="dark" lang="{{site.active_lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ '/assets/css/dist-style.css' | relative_url }}" rel="stylesheet" />
+    <link href="{{ '/assets/css/fonts.css' | relative_url }}" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script>
+      const { animate, scroll } = Motion
+    </script>
+
+    {% seo %}
+    {% include custom_head.html %}
+  </head>
+
+  <body class="bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-200">
+    {% include navbar.html %} 
+      {{ content }} 
+    {% include footer.html %}
+    <script>
+      document.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link action temporarily
+          link.classList.add("gentle-clicked");
+
+          setTimeout(function () {
+            link.classList.remove("gentle-clicked");
+            window.location.href = link.href; // Navigate to the link after the animation
+          }, 300); // Duration of the gentle bounce animation
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize motion animations for all sections
+        const motionElements = document.querySelectorAll('[data-motion]');
+        
+        motionElements.forEach(element => {
+          const animationType = element.getAttribute('data-motion');
+          const onScroll = element.getAttribute('data-motion-onscroll') !== 'false';
+          
+          // Handle stagger cards differently
+          if (animationType === 'stagger-cards') {
+            const cards = element.children;
+            Array.from(cards).forEach((card, index) => {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(30px)';
+            });
+          } else {
+            // Set initial state for regular animations
+            element.style.opacity = '0';
+            element.style.transform = getInitialTransform(animationType);
+          }
+          
+          if (onScroll) {
+            // Create intersection observer for scroll-triggered animations
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  animateElement(entry.target, animationType);
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, { threshold: 0.2 });
+            
+            observer.observe(element);
+          } else {
+            // Animate immediately if not dependent on scroll
+            animateElement(element, animationType);
+          }
+        });
+        
+        function getInitialTransform(type) {
+          switch(type) {
+            case 'fadeInLeft':
+              return 'translateX(-100px)';
+            case 'fadeInRight':
+              return 'translateX(100px)';
+            case 'fadeInUp':
+              return 'translateY(50px)';
+            case 'fadeInDown':
+              return 'translateY(-50px)';
+            default:
+              return 'translateY(0)';
+          }
+        }
+        
+        function animateElement(element, type) {
+          // Get custom delay and duration from data attributes
+          const customDelay = parseFloat(element.getAttribute('data-motion-delay')) || 0;
+          const customDuration = parseFloat(element.getAttribute('data-motion-duration')) || (type === 'stagger-cards' ? 0.6 : 0.8);
+          
+          if (type === 'stagger-cards') {
+            // Animate cards with stagger effect
+            const cards = Array.from(element.children);
+            cards.forEach((card, index) => {
+              Motion.animate(card, 
+                { 
+                  opacity: [0, 1],
+                  transform: ['translateY(30px)', 'translateY(0)']
+                },
+                { 
+                  duration: customDuration,
+                  delay: customDelay + (index * 0.1),
+                  easing: 'ease-out'
+                }
+              );
+            });
+          } else {
+            // Regular animations with custom delay and duration
+            Motion.animate(element, 
+              { 
+                opacity: [0, 1],
+                transform: [getInitialTransform(type), 'translate(0, 0)']
+              },
+              { 
+                duration: customDuration,
+                delay: customDelay,
+                easing: 'ease-out'
+              }
+            );
+          }
+        }
+      });
+    </script>
+    <script>
+      // Theme switcher functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // Check for saved theme preference or default to 'dark'
+        const savedTheme = localStorage.getItem('theme');
+        const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const currentTheme = savedTheme || systemPreference;
+        
+        // Apply the current theme
+        if (currentTheme === 'dark') {
+          htmlElement.classList.add('dark');
+        } else {
+          htmlElement.classList.remove('dark');
+        }
+        
+        // Theme toggle event listener
+        if (themeToggle) {
+          themeToggle.addEventListener('click', function() {
+            if (htmlElement.classList.contains('dark')) {
+              htmlElement.classList.remove('dark');
+              localStorage.setItem('theme', 'light');
+            } else {
+              htmlElement.classList.add('dark');
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        }
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+          if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+              htmlElement.classList.add('dark');
+            } else {
+              htmlElement.classList.remove('dark');
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll(".inout > div").forEach((item) => {
+        scroll(animate(item, { opacity: [0, 1, 1, 0] }), {
+            target: item,
+            offset: ["start end", "end end", "start start", "end start"],
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+
+<link rel="stylesheet" href="{{ '/assets/css/monokai.css' | relative_url }}">
+<div class="container mx-auto">
+  <div id="post" class="prose md:prose-lg dark:prose-invert prose-img:rounded-lg max-w-[75ch] prose-neutral mx-auto pb-10 pt-20 lg:pt-[90px] lg:pb-20">
+    <h1 data-motion="fadeInRight" class="text-left text-2xl font-bold md:text-5xl text-neutral-900 dark:text-neutral-100">{{page.title}}</h1>
+
+    <img src="{{page.image}}" alt="{{page.title}}" data-motion="fadeInUp" data-motion-delay="0.6" data-motion-duration="0.4">
+
+    <div class="my-6" data-motion="fadeInUp" data-motion-delay="0.8" data-motion-duration="0.4">
+      {{content}}
+    </div>
+
+    <div class="mx-auto py-8">
+      {% include sharing.html %}
+    </div>
+
+  </div>
+</div>

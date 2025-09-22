@@ -1,0 +1,18 @@
+<div class="rounded-lg hover:bg-gray-50 shadow">
+  <a href="{{include.project.url | relative_url}}">
+    <div class="relative overflow-hidden rounded-lg">
+      <img src="{{include.project.image | relative_url}}" alt="image" class="object-cover w-full h-80" />
+      <div class="absolute inset-0 bg-stone-900 opacity-50 ">
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center flex-col">
+        <p class="font-mulish mt-6 mb-2 text-white">{{include.project.category | upcase}}</p>
+        <h2 class="font-semibold text-2xl hover:underline text-white text-center px-4 ">{{include.project.title}}</h2>
+        <div class="my-4">
+          {% for tag in include.project.tags %}
+          <category class="font-mulish text-sm text-white">#{{ tag | xml_escape }}</category>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

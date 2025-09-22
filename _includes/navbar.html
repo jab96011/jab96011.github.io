@@ -1,0 +1,73 @@
+{%- assign current_page_url = page.url | relative_url -%}
+<nav class="absolute top-0 left-0 right-0 flex w-full flex-wrap items-center justify-between py-4">
+  <div class="flex w-full flex-wrap items-center justify-between px-5">
+    <a class="flex" href="{{site.baseurl}}/" aria-label="Andres Chacon - Developer">
+      <img src="{{site.logo | relative_url}}" alt="webpage logo" class="block h-8 w-auto">
+      <p class="pl-4 hidden md:block text-lg font-bold">{{site.title}} <span
+          class="text-mulish text-sm font-normal">~{{page.url}}</span>
+      </p>
+    </a>
+
+    <div class="flex divide-x">
+      {% for page in site.pages %}
+      {% if page.nav %}
+      <div><a class="px-4 hover:underline {% if page.url == current_page_url %}font-bold{% endif %}"
+          href="{{ page.url | relative_url }}">{{ page.title | default: page.name }}</a></div>
+      {% endif%}
+      {% endfor %}
+
+      <div class="theme-switcher">
+        <button id="theme-toggle" class="px-4" aria-label="Toggle theme">
+          <span class="dark:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+          </span>
+          <span class="hidden dark:inline">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      {% if site.languages.size > 1 %}
+      <div class="language-switcher relative">
+        <button class="current-language px-4 hover:underline">
+          {{ site.active_lang | upcase }}
+        </button>
+
+        <div class="dropdown-content absolute hidden mt-2 py-2 bg-white dark:bg-neutral-700 rounded-sm shadow-lg z-20">
+          {% for tongue in site.languages %}
+            {% if tongue != site.active_lang %}
+            <a class="p-4 hover:underline" {% static_href
+              %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"
+              {% endstatic_href %}>{{ tongue | upcase }}</a>{%- if forloop.last == false -%}{{" "}}{{ site.langsep }}{%-
+            endif -%}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentLangButton = document.querySelector('.current-language');
+      const dropdownContent = document.querySelector('.dropdown-content');
+
+      if (currentLangButton && dropdownContent) {
+        currentLangButton.addEventListener('click', function () {
+          dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function (event) {
+          if (!currentLangButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</nav>
