@@ -34,6 +34,7 @@ author: Me
 > 이때, $\mathcal{F}$를 $\Omega$ 위의 $\sigma$-대수($\sigma$-algebra)라 부르고, $\mathcal{F}$의 원소를 가측 집합(measurable set)이라 부르며, $(\Omega, \mathcal{F})$를 가측 공간(measurable space)라 부른다.
 
 > **Definition.** 어떤 가측 공간 $(\Omega, \mathcal{F})$에 대해, 함수 $\mu : \mathcal{F} \to [0, \infty]$가 다음 조건을 만족한다고 하자.
+> 
 > 1. $\mu(\varnothing) = 0$
 > 2. 서로소인 가측 집합들의 열 $\{A_i\}_{i=1}^{\infty} \subseteq \mathcal{F}$에 대해,
 > 
@@ -48,6 +49,7 @@ author: Me
 
 늘상 그렇듯이, 위의 정의들로부터 직관적으로 크기를 재는 함수로써의 측도가 만족해야 할 몇 가지 성질들을 유도할 수 있다.
 > **Proposition.** 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu)$에 대해, 다음이 성립한다.
+> 
 > 1. $A, B \in \mathcal{F}$이고 $A \subseteq B$이면, $\mu(A) \leq \mu(B)$
 > 2. $A, B \in \mathcal{F}$이면, $\mu(A \cup B) + \mu(A \cap B) = \mu(A) + \mu(B)$
 
