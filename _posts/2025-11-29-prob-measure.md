@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Probability Theory] 측도와 확률공간
+title: Probability Theory_ 측도와 확률공간
 image: "https://picsum.photos/700/300"
 category: Physics and Mathematics
 author: Me
