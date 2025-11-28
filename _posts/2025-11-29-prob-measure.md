@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Probability Theory_ 측도와 확률공간
+title: Probability Theory_ Probability Measure and Random Variables
 image: "https://picsum.photos/700/300"
 category: Physics and Mathematics
 author: Me
