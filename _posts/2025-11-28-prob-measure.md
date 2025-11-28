@@ -31,7 +31,7 @@ author: Me
 > 2. $A \in \mathcal{F} \implies  \Omega \setminus A \in \mathcal{F}$
 > 3. $\mathcal{F}$ 이 $\cup$에 대해 닫혀있다.
 > 
-> 이때, $\mathcal{F}$를 $\Omega$ 위의 $\sigma$-대수($\sigma$-algebra)라 부르고, $\mathcal{F}$의 원소를 가측 집합(measurable set)이라 부르며, $(\Omega, \mathcal{F})$를 가측 공간(measurable space)라 부른다.
+> 이때, $\mathcal{F}$를 $\Omega$ 위의 **$\sigma$-대수($\sigma$-algebra)**라 부르고, $\mathcal{F}$의 원소를 **가측 집합(measurable set)**이라 부르며, $(\Omega, \mathcal{F})$를 **가측 공간(measurable space)**이라 부른다.
 
 > **Definition.** 어떤 가측 공간 $(\Omega, \mathcal{F})$에 대해, 함수 $\mu : \mathcal{F} \to [0, \infty]$가 다음 조건을 만족한다고 하자.
 > 
@@ -42,23 +42,22 @@ author: Me
 > \displaystyle\mu\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} \mu(A_i)
 > $$
 > 
-> 이때, $\mu$를 측도(measure)라 부르고, $(\Omega, \mathcal{F}, \mu)$를 측도 공간(measure space)라 부른다.
+> 이때, $\mu$를 **측도(measure)**라 부르고, $(\Omega, \mathcal{F}, \mu)$를 **측도 공간(measure space)**라 부른다.
 
 > **Example.** 어떤 유한 집합 $\Omega$에 대해, $\mathcal{F} = \mathcal{P}(\Omega)$, $\mu(A) = |A|$로 정의하자.
 > 이때, $(\Omega, \mathcal{F}, \mu)$는 측도 공간이다. 
 
 늘상 그렇듯이, 위의 정의들로부터 직관적으로 크기를 재는 함수로써의 측도가 만족해야 할 몇 가지 성질들을 유도할 수 있다.
+
 > **Proposition.** 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu)$에 대해, 다음이 성립한다.
 > 
 > 1. $A, B \in \mathcal{F}$이고 $A \subseteq B$이면, $\mu(A) \leq \mu(B)$
 > 2. $A, B \in \mathcal{F}$이면, $\mu(A \cup B) + \mu(A \cap B) = \mu(A) + \mu(B)$
 
-> **Definition.** 어떤 위상 공간 $(\Omega, \mathcal{T})$에 대해, $\mathcal{T}$를 포함하는 가장 작은 $\sigma$-대수 $\mathcal{B}(\Omega)$를 $\Omega$의 Borel $\sigma$-대수(Borel $\sigma$-algebra)라 부른다.
-
 ## Probability space and random variables
 만약, 전체 공간의 크기가 1이 되도록 하는 측도를 생각하면 이 공간의 부분집합의 크기는 그 자체로 전체 공간의 크기에 대한 비율이 되고 이를 확률로 생각할 수 있다.
 
-> **Definition.** 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu = \mathbb{P})$에 대해, $\mathbb{P}(\Omega) = 1$이라면, 이를 확률 공간(probability space)이라 부르고, $\mathbb{P}$를 확률 측도(probability measure)라 하고 $\Omega$의 원소를 표본 공간(sample space)이라 하며, $\mathcal{F}$의 원소를 사건(event)이라 부른다.
+> **Definition.** 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu = \mathbb{P})$에 대해, $\mathbb{P}(\Omega) = 1$이라면, 이를 **확률 공간(probability space)**이라 부르고, $\mathbb{P}$를 **확률 측도(probability measure)**라 하고 $\Omega$의 원소를 **표본 공간(sample space)**이라 하며, $\mathcal{F}$의 원소를 **사건(event)**이라 부른다.
 
 이제 다시 처음의 예시로 돌아가보자. 
 상자에서 공 하나를 무작위로 뽑는 실험에서, 표본 공간 $\Omega$는 상자 안의 100개의 공으로 이루어진 집합이다.
@@ -86,9 +85,9 @@ $$
 로 쓸 수 있고, 빨간색 공을 뽑을 확률은 $\mathbb{P}(X^{-1}(1)) = 20/100 = 1/5$로 쓸 수 있다.
 이처럼, 그 역상으로써 사건을 표현할 수 있는 함수를 생각해보고자 한다.
 
-> **Definition.** 두 가측 공간 $(\Omega, \mathcal{F})$, $(E, \mathcal{E})$에 대해, 함수 $X : \Omega \to E$가 임의의 $B \in \mathcal{E}$에 대해 $X^{-1}(B) \in \mathcal{F}$를 만족하면, $X$를 $\mathcal{F}/\mathcal{E}$-가측 함수(measurable function)라 부른다.
+> **Definition.** 두 가측 공간 $(\Omega, \mathcal{F})$, $(E, \mathcal{E})$에 대해, 함수 $X : \Omega \to E$가 임의의 $B \in \mathcal{E}$에 대해 $X^{-1}(B) \in \mathcal{F}$를 만족하면, $X$를 $\mathcal{F}/\mathcal{E}$-**가측 함수(measurable function)**라 부른다.
 
-> **Definition.** 어떤 확률 공간 $(\Omega, \mathcal{F}, \mathbb{P})$ 와 가측 공간 $(E, \mathcal{E})$에 대해, $\mathcal{F}/\mathcal{E}$-가측 함수 $X : \Omega \to E$를 확률 변수(random variable)라 부른다.
+> **Definition.** 어떤 확률 공간 $(\Omega, \mathcal{F}, \mathbb{P})$ 와 가측 공간 $(E, \mathcal{E})$에 대해, $\mathcal{F}/\mathcal{E}$-가측 함수 $X : \Omega \to E$를 **확률 변수(random variable)**라 부른다.
 
 > **Notation.** 어떤 확률 변수 $X : \Omega \to E$가 주어지면, $X$가 $x \in E$ 라는 값을 가지는 확률을 $\mathbb{P}(X = x)$로 쓴다. 즉,
 > $$
