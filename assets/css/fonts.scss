@@ -15,8 +15,7 @@
 
 @font-face {
   font-family: "Suite";
-  src: url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/static/woff2/SUITE-Regular.woff2") format("woff2");
-  font-display: swap;
+  src: url({{ "/assets/fonts/SUITE-Regular.ttf" | relative_url }});font-display: swap;
   unicode-range: U+AC00-D7A3;
 }
 
