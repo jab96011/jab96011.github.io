@@ -26,6 +26,7 @@ author: Me
 수학자들이 늘 하는 일은, 이 $\mathcal{F}$와 $\mu$가 최소한 만족해야 할 조건들을 정하는 것이다.
 
 > **Definition.** 어떤 집합 $\Omega$에 대해, $\mathcal{F} \subseteq \mathcal{P}(\Omega)$가 다음 조건을 만족한다고 하자.
+> 
 > 1. $\varnothing \in \mathcal{F}$
 > 2. $A \in \mathcal{F} \implies  \Omega \setminus A \in \mathcal{F}$
 > 3. $\mathcal{F}$ 이 $\cup$에 대해 닫혀있다.
