@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Probability theory] Probability Measure and Random Variables
+title: Probability theory_ Probability Measure and Random Variables
 image: "https://picsum.photos/700/300"
 category: Physics and Mathematics
 author: Me
