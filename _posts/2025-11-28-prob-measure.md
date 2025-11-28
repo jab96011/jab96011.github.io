@@ -35,9 +35,11 @@ author: Me
 > **Definition.** 어떤 가측 공간 $(\Omega, \mathcal{F})$에 대해, 함수 $\mu : \mathcal{F} \to [0, \infty]$가 다음 조건을 만족한다고 하자.
 > 1. $\mu(\varnothing) = 0$
 > 2. 서로소인 가측 집합들의 열 $\{A_i\}_{i=1}^{\infty} \subseteq \mathcal{F}$에 대해,
+> 
 > $$
-> \mu\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} \mu(A_i)
+> \displaystyle\mu\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} \mu(A_i)
 > $$
+> 
 > 이때, $\mu$를 측도(measure)라 부르고, $(\Omega, \mathcal{F}, \mu)$를 측도 공간(measure space)라 부른다.
 
 > **Example.** 어떤 유한 집합 $\Omega$에 대해, $\mathcal{F} = \mathcal{P}(\Omega)$, $\mu(A) = |A|$로 정의하자.
@@ -60,6 +62,7 @@ author: Me
 이 공에 각각 번호를 붙여 $\Omega = \{1, 2, \ldots, 100\}$가 되도록 하자.
 이때, $\mathcal{F} = \mathcal{P}(\Omega)$, $\mathbb{P}(A) = |A| / 100$로 정의하면, $(\Omega, \mathcal{F}, \mathbb{P})$는 확률 공간이 된다.
 이제, 빨, 주, 노, 초, 파 각각의 색깔을 1, 2, 3, 4, 5에 대응하면, 다음과 같은 함수를 생각할 수 있다.
+
 $$
     X(\omega)= \begin{cases}
     1 & (1 \leq \omega \leq 20)\\
@@ -69,6 +72,7 @@ $$
     5 & (80 < \omega \leq 100)
     \end{cases}
 $$
+
 즉, 1번부터 20번까지의 공이 빨간색이고, 21번부터 40번까지의 공이 주황색이고, ... 한 상황을 생각해보자는 것이다. 
 이제, 빨간색 공을 뽑는 사건은 색깔을 뽑는 함수 $X$의 빨간색에 대한 역상,
 $$
