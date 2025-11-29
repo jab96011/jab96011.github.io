@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Probability theory_ 확률 공간과 확률 변수
+title: Probability theory_ 확률과 확률 변수
 image: "https://picsum.photos/700/300"
 category: Physics and Mathematics
 author: Me
@@ -84,19 +84,19 @@ $$
 이제, 빨간색 공을 뽑는 사건은 색깔을 뽑는 함수 $X$의 빨간색에 대한 역상,
 
 $$
-    X^{-1}(1) = \{\omega \in \Omega | X(\omega) = 1\} = \{1, 2, \ldots, 20\}
+    X^{-1}({1}) = \{\omega \in \Omega | X(\omega) = 1\} = \{1, 2, \ldots, 20\}
 $$
 
-로 쓸 수 있고, 빨간색 공을 뽑을 확률은 $\mathbb{P}(X^{-1}(1)) = 20/100 = 1/5$로 쓸 수 있다.
+로 쓸 수 있고, 빨간색 공을 뽑을 확률은 $\mathbb{P}(X^{-1}({1})) = 20/100 = 1/5$로 쓸 수 있다.
 이처럼, 그 역상으로써 사건을 표현할 수 있는 함수를 생각해보고자 한다.
 
 > **Definition.** 두 가측 공간 $(\Omega, \mathcal{F})$, $(E, \mathcal{E})$에 대해, 함수 $X : \Omega \to E$가 임의의 $B \in \mathcal{E}$에 대해 $X^{-1}(B) \in \mathcal{F}$를 만족하면, $X$를 $\mathcal{F}/\mathcal{E}$-**가측 함수(measurable function)**라 부른다.
 
 > **Definition.** 어떤 확률 공간 $(\Omega, \mathcal{F}, \mathbb{P})$ 와 가측 공간 $(E, \mathcal{E})$에 대해, $\mathcal{F}/\mathcal{E}$-가측 함수 $X : \Omega \to E$를 **확률 변수(random variable)**라 부른다.
 
-> **Notation.** 어떤 확률 변수 $X : \Omega \to E$가 주어지면, $X$가 $x \in E$ 라는 값을 가지는 확률을 $\mathbb{P}(X = x)$로 쓴다. 즉,
+> **Notation.** 어떤 확률 변수 $X : \Omega \to E$가 주어지면, $X(\omega)$가 $A \subseteq E$에 속할 확률을 다음과 같이 쓴다.
 > $$
-> \mathbb{P}(X = x) := \mathbb{P}(X^{-1}(x))
+> \mathbb{P}(X \in A) := \mathbb{P}(X^{-1}(A)) \quad (A \in \mathcal{E})
 > $$
 > 이다.
 
