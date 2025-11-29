@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Probability theory_ Probability Measure and Random Variables
+title: Probability theory_ 확률 공간과 확률 변수
 image: "https://picsum.photos/700/300"
 category: Physics and Mathematics
 author: Me
@@ -16,14 +16,17 @@ author: Me
 예를 들어, 빨, 주, 노, 초, 파 색깔의 공이 각각 20개씩 들어있는 상자에서 공 하나를 무작위로 뽑는 실험을 생각해보자.
 이 실험에서, 빨간색 공을 뽑을 확률은 20/100 = 1/5 이다.
 
-이를 추상화해보면,
-어떤 전체 집합이 있고 그 안의 어떤 사건을 유발하는 부분집합을 뽑을 확률을 생각할 수 있다.
-다만, 전체 집합의 크기에 대한 부분집합의 크기의 비라는 확률을 정의하기 위해서는 전체 집합의 크기와 부분집합의 크기를 정의할 수 있어야 한다.
-즉, 집합은 *크기를 잴 수 있어야 한다*.
+이 정의는 직관적이긴 하지만, 몇 가지 문제가 있다. 
+대표적으로, 경우의 수 자체를 세지 못할 수 있다(literally, 셀 수 없는 무한 집합인 경우).
+가령 [0, 1] 구간에서 실수를 하나 무작위로 뽑는 실험을 생각해보자.
+이 실험에서, 1/2보다 작은 수를 뽑을 확률은 무엇일까?
+직관적으로 1/2이지만, 경우의 수를 셀 수 없으므로 이를 정의할 수 없다.
+이러한 문제를 해결하기 위해, 우리는 확률을 어떤 집합의 (추상적인) 크기의 비율로 정의하고자 한다.
+전체 집합의 크기를 1로 정하고, 부분집합의 크기를 전체 집합의 크기에 대한 비율로 정의하는 것이다.
 
 이를 위해, 수학에서는 집합에 측도(measure)라는 개념을 도입한다.
 집합 $\Omega$에 대해, 어떤 부분집합의 모임 $\mathcal{F} \subseteq \mathcal{P}(\Omega)$이 있어, $\mathcal{F}$의 모든 원소의 크기를 어떤 함수 $\mu$로 잴 수 있다고 하자. 
-수학자들이 늘 하는 일은, 이 $\mathcal{F}$와 $\mu$가 최소한 만족해야 할 조건들을 정하는 것이다.
+수학자들이 늘 하는 일은, $\mu$가 재는 것이 크기와 비슷한 것이 되려면 $\mathcal{F}$와 $\mu$가 최소한 만족해야 할 조건들을 정하는 것이다.
 
 > **Definition.** 어떤 집합 $\Omega$에 대해, $\mathcal{F} \subseteq \mathcal{P}(\Omega)$가 다음 조건을 만족한다고 하자.
 > 
@@ -32,6 +35,8 @@ author: Me
 > 3. $\mathcal{F}$ 이 $\cup$에 대해 닫혀있다.
 > 
 > 이때, $\mathcal{F}$를 $\Omega$ 위의 **$\sigma$-대수($\sigma$-algebra)**라 부르고, $\mathcal{F}$의 원소를 **가측 집합(measurable set)**이라 부르며, $(\Omega, \mathcal{F})$를 **가측 공간(measurable space)**이라 부른다.
+
+가측 공간 위에는 다음과 같은 크기를 재는 함수가 정의될 수 있다.
 
 > **Definition.** 어떤 가측 공간 $(\Omega, \mathcal{F})$에 대해, 함수 $\mu : \mathcal{F} \to [0, \infty]$가 다음 조건을 만족한다고 하자.
 > 
@@ -57,7 +62,7 @@ author: Me
 ## Probability space and random variables
 만약, 전체 공간의 크기가 1이 되도록 하는 측도를 생각하면 이 공간의 부분집합의 크기는 그 자체로 전체 공간의 크기에 대한 비율이 되고 이를 확률로 생각할 수 있다.
 
-> **Definition.** 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu = \mathbb{P})$에 대해, $\mathbb{P}(\Omega) = 1$이라면, 이를 **확률 공간(probability space)**이라 부르고, $\mathbb{P}$를 **확률 측도(probability measure)**라 하고 $\Omega$의 원소를 **표본 공간(sample space)**이라 하며, $\mathcal{F}$의 원소를 **사건(event)**이라 부른다.
+> **Definition.** 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu = \mathbb{P})$에 대해, $\mathbb{P}(\Omega) = 1$이라면, 이를 **확률 공간(probability space)**이라 부르고, $\mathbb{P}$를 **확률 측도(probability measure)**라 하며, 집합 $\Omega$을 **표본 공간(sample space)**이라 부르고, $\mathcal{F}$의 원소를 **사건(event)**이라 부른다.
 
 이제 다시 처음의 예시로 돌아가보자. 
 상자에서 공 하나를 무작위로 뽑는 실험에서, 표본 공간 $\Omega$는 상자 안의 100개의 공으로 이루어진 집합이다.
