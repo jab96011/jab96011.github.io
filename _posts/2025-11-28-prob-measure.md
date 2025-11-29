@@ -28,8 +28,7 @@ author: Me
 집합 $\Omega$에 대해, 어떤 부분집합의 모임 $\mathcal{F} \subseteq \mathcal{P}(\Omega)$이 있어, $\mathcal{F}$의 모든 원소의 크기를 어떤 함수 $\mu$로 잴 수 있다고 하자. 
 수학자들이 늘 하는 일은, $\mu$가 재는 것이 크기와 비슷한 것이 되려면 $\mathcal{F}$와 $\mu$가 최소한 만족해야 할 조건들을 정하는 것이다.
 
-> **Definition.** 
-> 
+> **Definition.**  
 > 어떤 집합 $\Omega$에 대해, $\mathcal{F} \subseteq \mathcal{P}(\Omega)$가 다음 조건을 만족한다고 하자.
 > 
 > 1. $\varnothing \in \mathcal{F}$
@@ -40,8 +39,7 @@ author: Me
 
 가측 공간 위에는 다음과 같은 크기를 재는 함수가 정의될 수 있다.
 
-> **Definition.** 
-> 
+> **Definition.**  
 > 어떤 가측 공간 $(\Omega, \mathcal{F})$에 대해, 함수 $\mu : \mathcal{F} \to [0, \infty]$가 다음 조건을 만족한다고 하자.
 > 
 > 1. $\mu(\varnothing) = 0$
@@ -53,15 +51,13 @@ author: Me
 > 
 > 이때, $\mu$를 **측도(measure)**라 부르고, $(\Omega, \mathcal{F}, \mu)$를 **측도 공간(measure space)**라 부른다.
 
-> **Example.** 
-> 
+> **Example.**  
 > 어떤 유한 집합 $\Omega$에 대해, $\mathcal{F} = \mathcal{P}(\Omega)$, $\mu(A) = |A|$로 정의하자.
 > 이때, $(\Omega, \mathcal{F}, \mu)$는 측도 공간이다. 
 
 늘상 그렇듯이, 위의 정의들로부터 직관적으로 크기를 재는 함수로써의 측도가 만족해야 할 몇 가지 성질들을 유도할 수 있다.
 
-> **Proposition.** 
-> 
+> **Proposition.**  
 > 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu)$에 대해, 다음이 성립한다.
 > 
 > 1. $A, B \in \mathcal{F}$이고 $A \subseteq B$이면, $\mu(A) \leq \mu(B)$
@@ -70,8 +66,7 @@ author: Me
 ## Probability space and random variables
 만약, 전체 공간의 크기가 1이 되도록 하는 측도를 생각하면 이 공간의 부분집합의 크기는 그 자체로 전체 공간의 크기에 대한 비율이 되고 이를 확률로 생각할 수 있다.
 
-> **Definition.** 
-> 
+> **Definition.**  
 > 어떤 측도 공간 $(\Omega, \mathcal{F}, \mu = \mathbb{P})$에 대해, $\mathbb{P}(\Omega) = 1$이라면, 이를 **확률 공간(probability space)**이라 부르고, $\mathbb{P}$를 **확률 측도(probability measure)**라 하며, 집합 $\Omega$을 **표본 공간(sample space)**이라 부르고, $\mathcal{F}$의 원소를 **사건(event)**이라 부른다.
 
 이제 다시 처음의 예시로 돌아가보자. 
@@ -100,16 +95,13 @@ $$
 로 쓸 수 있고, 빨간색 공을 뽑을 확률은 $\mathbb{P}(X^{-1}(\\{1\\})) = 20/100 = 1/5$로 쓸 수 있다.
 이처럼, 그 역상으로써 사건을 표현할 수 있는 함수를 생각해보고자 한다.
 
-> **Definition.** 
-> 
+> **Definition.**  
 > 두 가측 공간 $(\Omega, \mathcal{F})$, $(E, \mathcal{E})$에 대해, 함수 $X : \Omega \to E$가 임의의 $B \in \mathcal{E}$에 대해 $X^{-1}(B) \in \mathcal{F}$를 만족하면, $X$를 $\mathcal{F}/\mathcal{E}$-**가측 함수(measurable function)**라 부른다.
 
-> **Definition.** 
-> 
+> **Definition.**  
 > 어떤 확률 공간 $(\Omega, \mathcal{F}, \mathbb{P})$ 와 가측 공간 $(E, \mathcal{E})$에 대해, $\mathcal{F}/\mathcal{E}$-가측 함수 $X : \Omega \to E$를 **확률 변수(random variable)**라 부른다.
 
-> **Notation.** 
-> 
+> **Notation.**  
 > 어떤 확률 변수 $X : \Omega \to E$가 주어지면, $X(\omega)$가 $A \subseteq E$에 속할 확률을 다음과 같이 쓴다.
 > $$
 > \mathbb{P}(X \in A) := \mathbb{P}(X^{-1}(A)) \quad (A \in \mathcal{E})
@@ -119,8 +111,7 @@ $$
 다만, 모든 사건을 모아둔 집합 $\mathcal{F}$와는 달리, 확률 변수 $X$가 만들어내는 사건들은 그 일부에 불과하다. 가령, $X^{-1}(B)$는 $B$에 1이 포함되어있다면 반드시 1부터 20까지의 수를 모두 포함하여야 하므로, $\\{1, 21\\}$이라는 사건은 $X$의 역상으로 표현할 수 없다.
 따라서, **확률 변수 $X$가 만들어내는 사건들의 모임**을 다음과 같이 정의한다.
 
-> **Definition.** 
-> 
+> **Definition.**  
 > 어떤 확률 변수 $X : \Omega \to E$에 대해, 
 > 
 > $$
