@@ -32,7 +32,7 @@ author: Me
 > 
 > 1. $\varnothing \in \mathcal{F}$
 > 2. $A \in \mathcal{F} \implies  \Omega \setminus A \in \mathcal{F}$
-> 3. $\mathcal{F}$ 이 $\cup$에 대해 닫혀있다.
+> 3. $\mathcal{F}$ 이 가산 $\cup$ 연산에 대해 닫혀있다.
 > 
 > 이때, $\mathcal{F}$를 $\Omega$ 위의 **$\sigma$-대수($\sigma$-algebra)**라 부르고, $\mathcal{F}$의 원소를 **가측 집합(measurable set)**이라 부르며, $(\Omega, \mathcal{F})$를 **가측 공간(measurable space)**이라 부른다.
 
@@ -84,10 +84,10 @@ $$
 이제, 빨간색 공을 뽑는 사건은 색깔을 뽑는 함수 $X$의 빨간색에 대한 역상,
 
 $$
-    X^{-1}({1}) = \{\omega \in \Omega | X(\omega) = 1\} = \{1, 2, \ldots, 20\}
+    X^{-1}(\{1\}) = \{\omega \in \Omega | X(\omega) = 1\} = \{1, 2, \ldots, 20\}
 $$
 
-로 쓸 수 있고, 빨간색 공을 뽑을 확률은 $\mathbb{P}(X^{-1}({1})) = 20/100 = 1/5$로 쓸 수 있다.
+로 쓸 수 있고, 빨간색 공을 뽑을 확률은 $\mathbb{P}(X^{-1}(\\{1\\})) = 20/100 = 1/5$로 쓸 수 있다.
 이처럼, 그 역상으로써 사건을 표현할 수 있는 함수를 생각해보고자 한다.
 
 > **Definition.** 두 가측 공간 $(\Omega, \mathcal{F})$, $(E, \mathcal{E})$에 대해, 함수 $X : \Omega \to E$가 임의의 $B \in \mathcal{E}$에 대해 $X^{-1}(B) \in \mathcal{F}$를 만족하면, $X$를 $\mathcal{F}/\mathcal{E}$-**가측 함수(measurable function)**라 부른다.
