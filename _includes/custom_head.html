@@ -1,29 +1,15 @@
 <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
-    },
-    options: {
-      renderActions: {
-        addMenu: []
-      }
-    },
-    chtml: {
-      scale: 1,
-      mtextInheritFont: true
-    },
-    startup: {
-      ready: () => {
-        MathJax.startup.defaultReady();
-
-        document.querySelectorAll('.mjx-inline').forEach(el => {
-          el.style.fontSize = '0.85em'; 
-          el.style.marginRight = '0.5em';
-        });
-      }
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  options: {
+    renderActions: {
+      addMenu: []
     }
-  };
+  },
+};
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
