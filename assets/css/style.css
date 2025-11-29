@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import "mathstyle";
 
 @plugin '@tailwindcss/typography';
 
