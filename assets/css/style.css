@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import "mathstyle";
 
 @plugin '@tailwindcss/typography';
 
@@ -59,4 +58,8 @@
 
 a.gentle-clicked {
   animation: gentle-bounce 0.3s ease-out; /* Shorter, smoother animation */
+}
+
+mjx-container[display="inline"]{
+  font-size: 105% !important;
 }
