@@ -38,7 +38,7 @@ $$
 > i \hbar \frac{d}{dt} \Psi(t) = {\tilde{\mathcal{H}}}(t) \Psi(t)
 > $$
 >
-> 만약, $|\dot{R}|$가 $\Delta/\hbar$에 비해 충분히 작다면 ($\Delta$는 고윳값 간의 간격), $\Psi(t)$는 다음과 같이 근사될 수 있다.
+> 만약, $ |\dot{R}| $가 $ \Delta/\hbar $에 비해 충분히 작다면 ($ \Delta $는 고윳값 간의 간격), $\Psi(t)$는 다음과 같이 근사될 수 있다.
 > 
 > $$
 > \Psi(t) \simeq \exp\left( -\frac{i}{\hbar} \int_0^t \tilde{E}_n(t') dt' \right) \exp\left( i {\gamma}_n(t) \right) \tilde{\psi}_n(t)
@@ -81,7 +81,7 @@ $$
 이때, 위의 적분에서 등장하는 1-형식
 
 $$
-    A := i \langle \partial_i \psi_n(R) , \psi_n(R) \rangle dR^{i}
+    A_n := i \langle \partial_i \psi_n(R) , \psi_n(R) \rangle dR^{i}
 $$
 
 을 **Berry 접속(Berry connection)**이라 부른다.
@@ -92,19 +92,20 @@ $$
 > $$
 > i\langle \partial_i \psi_n(R) , \psi_n(R) \rangle + i\langle \psi_n(R) , \partial_i \psi_n(R) \rangle = 0
 > $$
-> 이다. 그런데, 좌변은 $A_i - \overline{A_i}$이므로, $A$가 허수가 되는 걱정을 할 필요는 없다.
+> 이다. 그런데, 좌변은 $(A_n)_i - \overline{(A_n)_i}$이므로, $A_n$이 허수가 되는 걱정을 할 필요는 없다.
 
 이제, 매개변수 공간 $\mathcal{M}$ 위의 닫힌 곡선 $C$를 생각해보자. 이때, 다음과 같이 Stokes 정리를 적용할 수 있다.
 $$
-    \gamma_n(C) = \oint_C A = \int_S dA
+    \gamma_n(C) = \oint_C A_n = \int_S dA_n
 $$
 여기서, $S$는 $C$를 경계로 가지는 $\mathcal{M}$ 위의 임의의 곡면이다.
-이때, 2-형식 $\Omega := dA$를 **Berry 곡률(Berry curvature)**이라 부른다.
+이때, 2-형식 $\Omega_n := dA_n$를 **Berry 곡률(Berry curvature)**이라 부른다.
 
 ## Gauge transformation and Chern number
 
 가장 처음 상황으로 돌아가보자.
-해밀토니안 $\mathcal{H}(R)$의 고유벡터 $\psi_n(R)$는 유일하지 않다. 임의의 $R$에 대해, 다음과 같이 위상 인자를 곱해도 여전히 고유벡터가 된다.
+해밀토니안 $\mathcal{H}(R)$의 고유벡터 $\psi_n(R)$는 유일하지 않다.
+임의의 $R$에 대해, 다음과 같이 위상 인자를 곱해도 여전히 고유벡터가 된다.
 
 $$
     \psi_n(R) \mapsto e^{-i \Lambda(R)} \psi_n(R), \quad \Lambda : \mathcal{M} \to \mathbb{R}
@@ -112,7 +113,14 @@ $$
 
 이러한 변환을 **국소 게이지 변환(local gauge transformation)**이라 부른다.
 
-이때, Berry 접속 $A$는 다음과 같이 변환된다.
+이 상황을 조금 다른 관점에서도 생각해볼 수 있다. 
+각 점에 $\psi_n(R)$을 대응시키는 대신, $\psi_n(R)$이 속한 1차원 복소 벡터 공간 $\text{span}_{\mathbb{C}}\\{\psi_n(R)\\}$을 대응시키는 것이다. 이를 **복소 선다발(complex line bundle)**이라 부른다. 파동함수 $\psi_n(R)$는 이 선다발의 국소적 단면(section)으로 생각할 수 있다.
+
+이때, Berry 접속 $A_n$는 다음과 같이 변환된다.
+
 $$
-    A \mapsto i \langle \partial_i (e^{-i \Lambda(R)} \psi_n(R)) , e^{-i \Lambda(R)} \psi_n(R) \rangle dR^{i} = A + d\Lambda
+    A_n \mapsto i \langle \partial_i (e^{-i \Lambda(R)} \psi_n(R)) , e^{-i \Lambda(R)} \psi_n(R) \rangle dR^{i} = A_n + d\Lambda
 $$
+
+따라서, Berry 곡률 $\Omega_n$은 게이지 불변량이다. ($d^2 = 0$이므로)
+
