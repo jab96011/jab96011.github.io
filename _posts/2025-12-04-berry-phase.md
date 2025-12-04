@@ -38,7 +38,7 @@ $$
 > i \hbar \frac{d}{dt} \Psi(t) = {\tilde{\mathcal{H}}}(t) \Psi(t)
 > $$
 >
-> 만약, $ |\dot{R}| $가 $ \Delta/\hbar $에 비해 충분히 작다면 ($ \Delta $는 고윳값 간의 간격), $\Psi(t)$는 다음과 같이 근사될 수 있다.
+> 만약, $\|\dot{R}\|$가 $\Delta/\hbar$에 비해 충분히 작다면 ($\Delta$는 고윳값 간의 간격), $\Psi(t)$는 다음과 같이 근사될 수 있다.
 > 
 > $$
 > \Psi(t) \simeq \exp\left( -\frac{i}{\hbar} \int_0^t \tilde{E}_n(t') dt' \right) \exp\left( i {\gamma}_n(t) \right) \tilde{\psi}_n(t)
@@ -71,6 +71,7 @@ $$
 $$
 
 따라서, 기하학적 위상은 다음과 같이 쓸 수 있다.
+
 $$
     \gamma_n(t) = i \int_0^t \langle \partial_i {\psi}_n(R(t')) , {\psi}_n(R(t')) \rangle \cdot \dot{R}(t') dt' = \int_C i \langle \partial_i {\psi}_n(R) , {\psi}_n(R) \rangle dR^{i}
 $$
@@ -92,12 +93,15 @@ $$
 > $$
 > i\langle \partial_i \psi_n(R) , \psi_n(R) \rangle + i\langle \psi_n(R) , \partial_i \psi_n(R) \rangle = 0
 > $$
+> 
 > 이다. 그런데, 좌변은 $(A_n)_i - \overline{(A_n)_i}$이므로, $A_n$이 허수가 되는 걱정을 할 필요는 없다.
 
 이제, 매개변수 공간 $\mathcal{M}$ 위의 닫힌 곡선 $C$를 생각해보자. 이때, 다음과 같이 Stokes 정리를 적용할 수 있다.
+
 $$
     \gamma_n(C) = \oint_C A_n = \int_S dA_n
 $$
+
 여기서, $S$는 $C$를 경계로 가지는 $\mathcal{M}$ 위의 임의의 곡면이다.
 이때, 2-형식 $\Omega_n := dA_n$를 **Berry 곡률(Berry curvature)**이라 부른다.
 
