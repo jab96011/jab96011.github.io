@@ -248,3 +248,56 @@ $$
 $$
     \Omega = d\omega^{(\psi)} = -i dA = -i F
 $$
+
+중요한 것은, $\Omega$는 $U$ 뿐만이 아라, $\mathcal{M}$ 전체로 확장될 수 있다는 것이다. 
+왜냐하면, 서로 다른 열린집합 $U_{\alpha}, U_{\beta}$ 에 대해 $U_{\alpha} \cap U_{\beta}$ 위에서 서로 다른 단면 $\psi_{\alpha}, \psi_{\beta}$이 서로 게이지 변환 관계에 있고, 위에서 보았듯 곡률 $\Omega$는 게이지 불변이기 때문이다.
+
+따라서, Berry 곡률 $F$ 역시 $\mathcal{M}$ 전체에서 잘 정의된 2-형식이다.
+
+## Chern number
+
+> **Proposition 3.**
+> $\mathcal{M}$이 2차원 컴팩트 다양체라고 하자. 이때, Berry 곡률 $F$에 대해, 다음 적분이 정수 값을 가진다.
+> 
+> $$
+>    C_1 := \frac{1}{2\pi} \int_{\mathcal{M}} F \in \mathbb{Z}
+> $$
+>
+> 이를 **1차 Chern 수(first Chern number)** 라 부른다.
+
+$\mathcal{M}$을 두 개의 열린집합 $U_{\alpha}$, $U_{\beta}$이 덮는 상황을 가정해보자. 
+이때, 적분은 다음과 같이 나눌 수 있다.
+
+$$
+    \int_{\mathcal{M}} F = \int_{U_{\alpha}} F + \int_{U_{\beta} \setminus U_{\alpha}} F
+$$
+
+각 영역에서 Stokes 정리를 적용하면 다음과 같이 쓸 수 있다.
+
+$$
+    \int_{\mathcal{M}} F = \int_{\partial U_{\alpha}} A_{\alpha} + \int_{\partial (U_{\beta} \setminus U_{\alpha})} A_{\beta} = \int_{C} (A_{\alpha} - A_{\beta})
+$$
+
+여기서, $C = \partial U_{\alpha} = - \partial (U_{\beta} \setminus U_{\alpha}) \subseteq \partial (U_{\alpha} \cap U_{\beta})$이다. 그런데, 앞에서 보았듯이, 전이 함수 $g_{\alpha \beta} = e^{-i \Lambda_{\alpha \beta}}$에 대해, 다음이 성립한다.
+
+$$
+    \int_{C} (A_{\alpha} - A_{\beta}) = \int_{C} d\Lambda_{\alpha \beta}
+$$
+
+이 적분은 $C$ 위의 $\Lambda_{\alpha \beta}$의 변화량과 같다. 그런데, $C$는 닫힌 곡선이므로, $\Lambda_{\alpha \beta}$의 변화량은 $2\pi$의 정수배여야만 한다. 따라서, $C_1$는 정수값을 가진다. 더 많은 열린집합으로 덮는 경우에도 같은 논리가 적용되고, $\mathcal{M}$이 컴팩트 다양체이기 때문에 유한 개의 열린집합으로 덮을 수 있으므로, 결국 $C_1$는 정수값을 가진다.
+
+이러한 Chern 수는 주어진 주다발의 전역적인 성질을 나타내는 불변량이다. 
+국소적으로 정의된 접속과 곡률로부터 계산되지만, 그 값은 주다발의 전역적인 성질에 의해서만 결정된다. 이는 마치 Gauss-Bonnet 정리에서 곡률의 적분이 그 면의 오일러 지표와 같다는 것과 유사하다.
+
+고체물리에서는 Bloch 운동량 공간, Brillouin 영역이 매개변수 공간 $\mathcal{M}$이 될 수 있다. 
+2차원 Brillouin 영역을 생각해보면, 양 끝을 이어붙이고 위아래를 이어붙일 수 있으므로, 토러스 $T^2$와 동형임을 알 수 있다. 이 위에서의 Chern 수는 정수 양자 Hall 효과(integer quantum Hall effect)에서 등장한다. Kubo 공식에 의하면, Hall 전도도는
+
+$$
+    \sigma_{xy} = \frac{e^2}{h} C_1
+$$
+
+으로 주어진다. 즉, 자기장이 가해진 2D 물질에서 Chern 수는 실제로 물리적으로 측정 가능한 양이다.
+
+## Conclusion
+이번 글에서는 양자역학에서 등장하는 Berry 접속과 곡률이 미분기하학의 주다발 이론과 어떻게 연결되는지를 살펴보았다.
+다음 글에서는 Chern 수에 대한 더 일반적인 $2n$차원 위의 이론인 Chern-Weil 이론과, 이를 이용한 $2n-1$차원 위에서의 Chern-Simons 이론에 대해 소개하고자 한다.
