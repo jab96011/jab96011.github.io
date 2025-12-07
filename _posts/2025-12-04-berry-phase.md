@@ -165,7 +165,7 @@ $$
 만약 단면 $\psi$를 열린 집합 $U$ 위에서 선택했다면, $U$ 위의 임의의 단면 $s$는 어떤 함수 $s^{(\psi)} : U \to U(1)$에 대해 다음과 같이 쓸 수 있다.
 
 $$
-    s = s^{(\psi)}\psi
+    s = \psi s^{(\psi)}
 $$
 
 이는 게이지를 하나 고르는 것은 $U \times U(1)$ 위의 좌표계 $(R, s^{(\psi)}(R))$를 고르는 것과 같다는 것을 의미한다. 따라서, 다음과 같은 반변 규칙(contravariant rule)이 존재한다.
@@ -201,20 +201,16 @@ $$
 서로 다른 점에 붙은 $U(1)$은 독립된 공간이기 때문에, 두 점에 붙어 있는 $U(1)$의 원소를 직접 비교하는 것은 불가능하다. 
 따라서, 한 점에 붙어있는 원소를 다른 점에 붙어있는 공간으로 옮길 때 어떻게 변하는지를 알려주는 구조가 필요하다. 이를 통상적으로 접속(connection)이라 부른다.
 
-$U \cong \mathbb{R}^d$인 $\mathcal{M}$의 열린집합을 생각하자. 이때, $U \times U(1)$ 위에서는, 다음 두 조건을 만족하는 **접속 (connection)** $\nabla$을 정의할 수 있다.
+$U \cong \mathbb{R}^d$인 $\mathcal{M}$의 열린집합을 생각하자. 이때, $U \times U(1)$ 위에서는, 다음 조건을 만족하는 **접속 (connection)** $\nabla$을 정의할 수 있다. (덧셈은 $T^*\mathcal{M}$ 위에서 정의되고, $U(1)$ 부분이 같을 때에 두 항을 더할 수 있다.)
 
 $$
-    \begin{cases}
-        \nabla s = ds^{(\psi)} \otimes \psi + s^{(\psi)} \nabla \psi
-        \\
-        \nabla (s + t) = \nabla s + \nabla t
-    \end{cases}
+    \nabla s = \psi \otimes ds^{(\psi)} + (\nabla \psi) s^{(\psi)}
 $$
 
 여기서, 기저의 접속 $\nabla \psi$이 공간의 구조를 담는다. 그 형태가 어떤지는 몰라도, 이 또한 $U(1) \times T^*\mathcal{M}$의 원소이므로, 다음과 같이 쓸 수 있다.
 
 $$
-    \nabla \psi = \omega^{(\psi)} \otimes \psi
+    \nabla \psi = \psi \otimes \omega^{(\psi)} 
 $$
 
 이때 $\omega^{(\psi)}$를 ($\psi$에 대한) **접속 1-형식(connection 1-form)**이라 부른다. (리만 기하학에서 Christoffel 기호라고 부르는 것이 이 접속 1-형식의 성분이다.)
@@ -222,7 +218,7 @@ $$
 이제 다른 기저 $\psi' = e^{-i \Lambda} \psi$의 접속 1-형식 $\omega^{(\psi')}$를 생각해보자.
 
 $$
-    \nabla \psi' = \nabla (e^{-i \Lambda} \psi) = -ie^{-i \Lambda} d\Lambda \otimes \psi + \omega^{(\psi)} \otimes e^{-i \Lambda} \psi = (\omega^{(\psi)} - i d\Lambda) \otimes \psi'
+    \nabla \psi' = \nabla (e^{-i \Lambda} \psi) = \psi \otimes (-ie^{-i \Lambda}) d\Lambda + e^{-i \Lambda} \psi \otimes \omega^{(\psi)} = \psi'  \otimes (\omega^{(\psi)} - i d\Lambda) 
 $$
 
 따라서, 
