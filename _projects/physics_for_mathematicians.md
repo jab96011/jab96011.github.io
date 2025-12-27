@@ -15,7 +15,7 @@ tags:
 
 추가로, 부록으로 제가 풀었던 과제 풀이를 첨부하였습니다. 이 강의노트가 수학을 전공하는 학생들이 물리학에 대한 이해를 넓히는 데 도움이 되기를 바랍니다.
 
-강의 노트는 LaTeX로 작성되었고, 컴파일된 PDF 파일은 [여기](https://github.com/jab96011/physics-for-mathematicians/blob/main/Tex/physics_for_mathematicians.pdf)에서 확인하실 수 있습니다.  
+강의 노트는 LaTeX로 작성되었고, 컴파일된 PDF 파일은 [**여기**](https://github.com/jab96011/physics-for-mathematicians/blob/main/Tex/physics_for_mathematicians.pdf)에서 확인하실 수 있습니다.  
 오류나 개선할 점이 있다면 jab96011@gmail.com 으로 연락 주시면 감사하겠습니다.
 
 ## 2025-2 Physics for Mathematicians
@@ -24,5 +24,5 @@ This is a lecture note for the course **Physics for Mathematicians** given by Pr
 
 Additionally, I have attached the solutions to the problem sets that I solved in the appendix. I hope this lecture note will help students majoring in mathematics to broaden their understanding of physics.
 
-The lecture note is written in LaTeX, and the compiled PDF file can be found [here](https://github.com/jab96011/physics-for-mathematicians/blob/main/Tex/physics_for_mathematicians.pdf).
+The lecture note is written in LaTeX, and the compiled PDF file can be found [**here**](https://github.com/jab96011/physics-for-mathematicians/blob/main/Tex/physics_for_mathematicians.pdf).
 If you find any mistakes or points for improvement, please kindly inform me at jab96011@gmail.com.
