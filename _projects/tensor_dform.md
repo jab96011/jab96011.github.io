@@ -2,7 +2,7 @@
 layout: project
 title: Lectures on Tensor and Differential Forms
 image: >-
-  '/assets/images/project_title/tensor_and_differential_form.png'
+  "/assets/images/project_title/tensor_and_differential_form.png"
 tags:
   - lecture
   - matphy
