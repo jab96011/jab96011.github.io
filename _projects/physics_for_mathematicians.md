@@ -9,7 +9,7 @@ tags:
   - English
 ---
 
-# 2025-2 수학자를 위한 물리학
+## 2025-2 수학자를 위한 물리학
 
 2025년 2학기 서울대학교 수리과학부에서 개설된 **수학자를 위한 물리학** 강의를 수강하며 작성한 강의 노트입니다. Otto van Koert 교수님께서 맡으신 고전역학과 전자기학, 이훈희 교수님께서 맡으신 양자역학과 통계역학으로 구성되어 있고, 수업 내용 중간중간 제가 개인적으로 알고 있는 물리적 직관이나 배경지식을 덧붙여 설명하였습니다. 
 
@@ -18,7 +18,7 @@ tags:
 강의 노트는 LaTeX로 작성되었고, 컴파일된 PDF 파일은 [여기](https://github.com/jab96011/physics-for-mathematicians/blob/main/Tex/physics_for_mathematicians.pdf)에서 확인하실 수 있습니다.  
 오류나 개선할 점이 있다면 jab96011@gmail.com 으로 연락 주시면 감사하겠습니다.
 
-# 2025-2 Physics for Mathematicians
+## 2025-2 Physics for Mathematicians
 
 This is a lecture note for the course **Physics for Mathematicians** given by Prof. Otto van Koert and Prof. Lee Hun Hee in Autumn 2025 at Seoul National University for junior students in the Department of Mathematical Sciences. Prof. Otto teaches classical mechanics part and electrodynamics part, and Prof. Lee teaches quantum mechanics part and statistical mechanics part. I have added some physical intuitions and background knowledge in between the contents of the lectures since I originally studied physics.
 
