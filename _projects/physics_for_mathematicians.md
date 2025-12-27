@@ -2,7 +2,7 @@
 layout: project
 title: Lecture Note for [Physics for Mathematicians]
 image: >-
-  https://github.com/jab96011/jab96011.github.io/blob/main/assets/images/project_title/physics_for_mathematicians.png
+  /assets/images/project_title/physics_for_mathematicians.png
 tags:
   - lecture_note
   - matphy
