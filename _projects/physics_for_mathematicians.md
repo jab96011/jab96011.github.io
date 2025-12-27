@@ -2,7 +2,7 @@
 layout: project
 title: Lecture Note for [Physics for Mathematicians]
 image: >-
-  assets/images/project_title/physics_for_mathematicians.png
+  /assets/images/project_title/physics_for_mathematicians.png
 tags:
   - lecture_note
   - matphy
