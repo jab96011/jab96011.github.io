@@ -15,4 +15,4 @@ As a mentoring program in the department of Nature Science, SNU, I gave a lectur
 
 [YouTube](https://www.youtube.com/playlist?list=PLZFjaUO7e3fN0otvN55PeRbXnA_Sau2UK) 
 
-[Lecture Note]()
+Lecture Note (To be uploaded)
