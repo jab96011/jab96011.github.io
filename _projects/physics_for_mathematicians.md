@@ -2,7 +2,7 @@
 layout: project
 title: Lecture Note for [Physics for Mathematicians]
 image: >-
-  "/assets/images/project_title/physics_for_mathematicians.png" | relative_url
+  '/assets/images/project_title/physics_for_mathematicians.png' | relative_url
 tags:
   - lecture_note
   - matphy
